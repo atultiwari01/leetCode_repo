@@ -1,13 +1,13 @@
 class Solution {
     boolean isHappy(int n) {
         Set<Integer> happy = new HashSet<>();
-        do{
+        while (true) {
 
             int sum = 0;
-            do{
+            while (n != 0) {
                 sum += Math.pow(n % 10, 2);
                 n = n / 10;
-            }while(n!=0);
+            }
             if (sum == 1) return true;
 
             n = sum;
@@ -15,6 +15,6 @@ class Solution {
             if (happy.contains(n))
                 return false;
             happy.add(n);
-        }while (true);
+        }
     }
 }
