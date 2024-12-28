@@ -1,15 +1,22 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int[] clone = nums.clone();
-        Arrays.sort(clone);
-        if (clone[0] != 0) {
-            return 0;
-        }
-        for (int i = 0; i < clone.length - 1; i++) {
-            if (clone[i + 1] - clone[i] != 1) {
-                return clone[i] + 1;
+        int n = nums.length;
+        for(int i =0 ; i<nums.length;){
+            int index = nums[i];
+            if(nums[i]<n&&nums[i]!=nums[index]){
+                int a=nums[index];
+                nums[index]=nums[i];
+                nums[i]=a;
+            }
+            else{
+                i++;
             }
         }
-        return clone[clone.length - 1] + 1;
+        for(int i = 0; i<n ; i++){
+            if(nums[i]!=i){
+                return i;
+            }
+        }
+        return n;
     }
 }
