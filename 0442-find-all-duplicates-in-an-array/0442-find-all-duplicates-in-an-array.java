@@ -5,7 +5,7 @@ class Solution {
     public List<Integer> findDuplicates(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < nums.length;) {
-            int index = Math.abs(nums[i]) - 1;
+            int index =nums[i]-1;
             if (nums[i] != nums[index]) {
                 int temp = nums[index];
                 nums[index] = nums[i];
