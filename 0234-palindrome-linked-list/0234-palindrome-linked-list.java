@@ -10,15 +10,15 @@
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        ArrayList<Integer> address = new ArrayList<>();
+        ArrayList<ListNode> address = new ArrayList<>();
         ListNode temp = head;
-
-        while(temp!=null){
-            address.add(temp.val);
+        while (temp != null) {
+            address.add(temp);
             temp = temp.next;
         }
-        for(int i = 0 ; i<(address.size())/2;i++){
-            if(address.get(i) != address.get(address.size()-i-1)){
+        int size = address.size();
+        for (int i = 0; i < size / 2; i++) {
+            if (address.get(i).val != address.get(size - i - 1).val) {
                 return false;
             }
         }
