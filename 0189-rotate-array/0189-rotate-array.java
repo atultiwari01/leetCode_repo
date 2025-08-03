@@ -9,7 +9,6 @@ class Solution {
             j++;
         }
 
-        // Copy back to nums
         for (int i = 0; i < l; i++) {
             nums[i] = arr[i];
         }
