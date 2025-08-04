@@ -7,10 +7,11 @@ class Solution {
             if(nums[i]==1){
                 repeat++;
             }
-            if(nums[i] != 1 || i == (l-1)){
+            else{
                 max = Math.max(repeat,max);
                 repeat = 0;
             }
+            max = Math.max(repeat,max);
         }
         return max;
     }
