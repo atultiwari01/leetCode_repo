@@ -10,8 +10,8 @@ class Solution {
                 max = Math.max(repeat,max);
                 repeat = 0;
             }
-            max = Math.max(repeat,max);
         }
+        max = Math.max(repeat,max);
         return max;
     }
 }
