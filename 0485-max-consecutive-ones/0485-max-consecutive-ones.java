@@ -11,7 +11,6 @@ class Solution {
                 repeat = 0;
             }
         }
-        max = Math.max(repeat,max);
-        return max;
+        return Math.max(repeat,max);
     }
 }
